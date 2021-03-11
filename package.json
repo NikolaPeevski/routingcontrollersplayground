@@ -1,0 +1,19 @@
+{
+  "name": "routingcontrollersplayground",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolaPeevski/routingcontrollersplayground.git"
+  },
+  "author": "NikolaPeevski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NikolaPeevski/routingcontrollersplayground/issues"
+  },
+  "homepage": "https://github.com/NikolaPeevski/routingcontrollersplayground#readme"
+}
