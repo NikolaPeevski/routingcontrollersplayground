@@ -132,7 +132,7 @@ dist
 ### yarn ###
 # https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
 
-.yarn/*
+.yarn
 !.yarn/releases
 !.yarn/plugins
 !.yarn/sdks
@@ -140,7 +140,7 @@ dist
 
 # if you are NOT using Zero-installs, then:
 # comment the following lines
-!.yarn/cache
+#!.yarn/cache
 
 # and uncomment the following lines
 # .pnp.*
