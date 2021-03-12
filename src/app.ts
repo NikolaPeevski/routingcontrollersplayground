@@ -3,17 +3,17 @@ import compression from "compression";
 import "reflect-metadata";
 import helmet from "helmet";
 
-import {
-  useExpressServer,
-  RoutingControllersOptions,
-} from "routing-controllers";
+import { useExpressServer, RoutingControllersOptions, useContainer } from "routing-controllers";
+import Container from "typedi";
 import Controllers from "./controllers";
 
+useContainer(Container);
+
 const routingControllersOptions: RoutingControllersOptions = {
-  cors: true,
-  controllers: Controllers,
-  routePrefix: "/api",
-  defaultErrorHandler: false,
+    cors: true,
+    controllers: Controllers,
+    routePrefix: "/api",
+    defaultErrorHandler: false,
 };
 
 // Create Express server

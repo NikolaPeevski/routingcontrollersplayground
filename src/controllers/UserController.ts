@@ -1,19 +1,24 @@
 import { JsonController, Param, Body, Get, Post } from "routing-controllers";
+import { Service } from "typedi";
+import UserService from "../services/UserService";
 
 @JsonController()
+@Service()
 export default class UserController {
-  @Get("/users")
-  getAll() {
-    return ["Yay users"];
-  }
+    constructor(private userService: UserService) {}
 
-  @Get("/users/:id")
-  getOne(@Param("id") id: number) {
-    return id;
-  }
+    @Get("/users")
+    getAll() {
+        return this.userService.getUsers();
+    }
 
-  @Post("/users")
-  post(@Body() user: any) {
-    return user;
-  }
+    @Get("/users/:id")
+    getOne(@Param("id") id: number) {
+        return id;
+    }
+
+    @Post("/users")
+    post(@Body() user: any) {
+        return user;
+    }
 }
